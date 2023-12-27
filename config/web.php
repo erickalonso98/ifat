@@ -26,6 +26,10 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'security' => [
+            'class' => 'yii\base\Security',
+            // puedes configurar opciones adicionales aquí
+        ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',

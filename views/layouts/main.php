@@ -31,6 +31,16 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css">
+
+<link href="assets/MyAssets/css/sb-admin-2.min.css" rel="stylesheet">
+
+     <!-- Bootstrap core JavaScript-->
+    <script src="assets/MyAssets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/MyAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="assets/MyAssets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100">
@@ -91,7 +101,7 @@ JS) ?>
 				<li class="sidebar-item">
 					<a href="<?= Url::toRoute(['/ifat/index']) ?>" class="sidebar-link">
 						<i class="bi bi-grid-fill"></i>
-						<span>Dashboard</span>
+						<span>Inicio</span>
 					</a>
 				</li>
 
@@ -111,6 +121,23 @@ JS) ?>
 						<li class="submenu-item">
 							<a href="<?= Url::to(['/ifat/encuesta']) ?>">Encuesta</a>
 						</li>
+					</ul>
+				</li>
+
+				<li class="sidebar-item has-sub">
+					<a href="#" class="sidebar-link">
+						<i class="bi bi-grid-1x2-fill"></i>
+						<span class="text-center">Login/Registro</span>
+					</a>
+					<ul class="submenu">
+					
+						<li class="submenu-item">
+							<a href="<?= Url::to(['/ifat/login'])?>">Login</a>
+						</li>
+						<li class="submenu-item">
+							<a href="<?= Url::to(['/ifat/register']) ?>">Registro</a>
+						</li>
+						
 					</ul>
 				</li>
 

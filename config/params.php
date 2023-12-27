@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
-    'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
+    'adminEmail' => 'erick.edjaa@gmail.com',
+    'title' => 'Confirmar tu registro en Ifat',
+    'salt' => 'fsddsflj38343lj0',
 ];
