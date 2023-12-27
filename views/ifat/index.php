@@ -1,1 +1,1 @@
-<h1 class="text-center"><?= $title ?></h1>
+<h1 class="text-center text-uppercase"><?= $title ?></h1>

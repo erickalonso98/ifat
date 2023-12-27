@@ -27,6 +27,26 @@ class IfatController extends Controller{
         return $this->render('index',['title' => $this->title]);
     }
 
+    public function actionAbout(){
+        $this->title = 'Nosotros';
+        return $this->render('about',['title' => $this->title]);
+    }
+
+    public function actionBlog(){
+        $this->title = 'Blog';
+        return $this->render('blog',['title' => $this->title]);
+    }
+
+    public function actionCatalogue(){
+        $this->title = 'Catalogos';
+        return $this->render('catalogue',['title' => $this->title]);
+    }
+
+    public function actionContact(){
+        $this->title = 'Contacto';
+        return $this->render('contact',['title' => $this->title]);
+    }
+
     public function actionCliente(){
         $this->title = 'Servicio al cliente';
         $model = new CommentsForm();

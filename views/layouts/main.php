@@ -108,6 +108,28 @@ JS) ?>
 				<li class="sidebar-item has-sub">
 					<a href="#" class="sidebar-link">
 						<i class="bi bi-grid-1x2-fill"></i>
+						<span>Categorias</span>
+					</a>
+					<ul class="submenu">
+					
+						<li class="submenu-item">
+							<a href="<?= Url::to(['ifat/about'])?>">Nosotros</a>
+						</li>
+						<li class="submenu-item">
+							<a href="<?= Url::to(['/ifat/blog']) ?>">Blog</a>
+						</li>
+						<li class="submenu-item">
+							<a href="<?= Url::to(['/ifat/catalogue']) ?>">Catalogos</a>
+						</li>
+						<li class="submenu-item">
+							<a href="<?= Url::to(['/ifat/contact']) ?>">Contacto</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="sidebar-item has-sub">
+					<a href="#" class="sidebar-link">
+					<i class="bi bi-phone-fill"></i>
 						<span>Area de Cliente</span>
 					</a>
 					<ul class="submenu">
@@ -126,7 +148,7 @@ JS) ?>
 
 				<li class="sidebar-item has-sub">
 					<a href="#" class="sidebar-link">
-						<i class="bi bi-grid-1x2-fill"></i>
+					<i class="bi bi-person-circle"></i>
 						<span class="text-center">Login/Registro</span>
 					</a>
 					<ul class="submenu">
@@ -140,6 +162,7 @@ JS) ?>
 						
 					</ul>
 				</li>
+				<!--
 
 				<li class="sidebar-title">Raise Support</li>
 
@@ -163,6 +186,7 @@ JS) ?>
 						<span>Donate</span>
 					</a>
 				</li>
+-->
 			</ul>
 		</div>
 	</div>
