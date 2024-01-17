@@ -14,6 +14,7 @@ class SiteController extends Controller
 {
 
     public $title;
+    public $name;
     /**
      * {@inheritdoc}
      */
