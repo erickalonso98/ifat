@@ -7,6 +7,10 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
+use yii\base\Security;
+//use yii\bootstrap5\Html;
+//use yii\helpers\Url;
+//use yii\bootstrap5\ActiveForm;
 
 use app\models\SoporteForm;
 use app\models\EncuestaForm;
@@ -30,11 +34,6 @@ class IfatController extends Controller{
     public function actionAbout(){
         $this->title = 'Nosotros';
         return $this->render('about',['title' => $this->title]);
-    }
-
-    public function actionBlog(){
-        $this->title = 'Blog';
-        return $this->render('blog',['title' => $this->title]);
     }
 
     public function actionCatalogue(){
@@ -159,8 +158,8 @@ class IfatController extends Controller{
     $table = new Users;
     $table->username = $model->username;
     $table->email = $model->email;
-    //Encriptamos el password
-    $table->password = crypt($model->password, Yii::$app->params["salt"]);
+    $table->password = Yii::$app->security->generatePasswordHash($model->password);    
+
     //Creamos una cookie para autenticar al usuario cuando decida recordar la sesión, esta misma
     //clave será utilizada para activar el usuario
     $table->authKey = $this->randKey("abcdef0123456789", 200);
@@ -211,7 +210,17 @@ class IfatController extends Controller{
         $this->title = 'Login';
         $this->text = 'Inicia sesion para continuar';
         $this->enlace = 'Registrate';
+
         $model = new LoginForm();
+
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        }
+
        return $this->render('login',['title' => $this->title,'text' => $this->text,'enlace' => $this->enlace,'model' => $model]);
     }
 }

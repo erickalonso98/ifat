@@ -28,18 +28,22 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/svg/favicon.svg" type="image/x-icon">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css">
 
-<link href="assets/MyAssets/css/sb-admin-2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
+	 
      <!-- Bootstrap core JavaScript-->
     <script src="assets/MyAssets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/MyAssets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="assets/MyAssets/vendor/jquery-easing/jquery.easing.min.js"></script>
+	
 
     <?php $this->head() ?>
 </head>
@@ -99,7 +103,7 @@ JS) ?>
 		<div class="sidebar-menu">
 			<ul class="menu">
 				<li class="sidebar-item">
-					<a href="<?= Url::toRoute(['/ifat/index']) ?>" class="sidebar-link">
+					<a href="<?= Url::to(['/']) ?>" class="sidebar-link">
 						<i class="bi bi-grid-fill"></i>
 						<span>Inicio</span>
 					</a>
@@ -114,9 +118,6 @@ JS) ?>
 					
 						<li class="submenu-item">
 							<a href="<?= Url::to(['ifat/about'])?>">Nosotros</a>
-						</li>
-						<li class="submenu-item">
-							<a href="<?= Url::to(['/ifat/blog']) ?>">Blog</a>
 						</li>
 						<li class="submenu-item">
 							<a href="<?= Url::to(['/ifat/catalogue']) ?>">Catalogos</a>
@@ -212,6 +213,10 @@ JS) ?>
     <!-- Need: Apexcharts -->
     <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/apexcharts/apexcharts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/pages/dashboard.js"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	 
 
 <?php $this->endBody() ?>
 </body>

@@ -28,6 +28,7 @@ $config = [
         ],
         'security' => [
             'class' => 'yii\base\Security',
+            'passwordHashCost' => 13
             // puedes configurar opciones adicionales aquí
         ],
         'mailer' => [

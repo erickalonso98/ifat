@@ -12,6 +12,8 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
+    public $title;
     /**
      * {@inheritdoc}
      */
@@ -61,7 +63,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $this->title = 'Ifat';
+        return $this->render('index',['title' => $this->title]);
     }
 
     /**
